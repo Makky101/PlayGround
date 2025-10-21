@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Teny's playground</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="panel left">
+            <div class="brand">
+                <div class="logo">EP</div>
+                <div>
+                    <h3 class="h1">Eternal Playground</h3>
+                    <div class="h2">Generative playground — draw, tweak, and save your moment.</div>
+                </div>
+            </div>
+
+            <div class="titleBar">
+                <div class="tiny">Mode</div>
+                <div class="toggle">
+                    <div class="switch" id="modeSwitch" title="Toggle mode">
+                        <div class="knob" id="knob"></div>
+                    </div>
+                </div>
+            </div>
+
+            <label class="small">Particle count <span id="countLabel" class="tiny">300</span></label>
+            <input id="count" type="range" min="50" max="1200" value="300" class="range">
+
+            <label class="small">Brush size <span id="sizeLabel" class="tiny">2.4</span></label>
+            <input id="size" type="range" min="0.2" max="8" step="0.1" value="2.4" class="range">
+
+            <label class="small">Attraction <span id="gravLabel" class="tiny">0.75</span></label>
+            <input id="grav" type="range" min="-2" max="2" step="0.01" value="0.75" class="range">
+
+            <div class="controls">
+                <button class="btn" id="regen">Regenerate</button>
+                <button class="btn" id="snap">Save PNG</button>
+                <button class="btn" id="toggleSound">Sound: Off</button>
+                <button class="btn" id="reset">Reset</button>
+            </div>
+
+            <div class="small">How to play: move your mouse or touch to push particles. Toggle mode to switch between
+                calm & chaotic. Click Save to export a high-res PNG.</div>
+
+            <div class="footer">Made for late-night tinkering ✨ — save something worth keeping.</div>
+        </div>
+
+        <div class="panel canvasWrap" id="mainPanel">
+            <canvas id="c"></canvas>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
